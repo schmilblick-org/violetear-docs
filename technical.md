@@ -30,3 +30,7 @@ SELECT * FROM tasks FOR UPDATE SKIP LOCKED LIMIT 1;
 UPDATE tasks SET result = $TASK_RESULT WHERE id = $TASK_ID;
 COMMIT;
 ```
+
+## Automated worker deployment
+
+Using [Vagrant](https://github.com/hashicorp/vagrant) with maybe [vagrant-libvirt](https://github.com/vagrant-libvirt/vagrant-libvirt) over ssh? For both Linux and Windows.
